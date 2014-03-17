@@ -1,0 +1,16 @@
+{% extends "common/base.html" %}
+
+{% block content %}
+        <ul>
+            <li><a href="/plugin/users/view/">View</a></li>
+            <li><a href="/plugin/users/add/">Add</a></li>
+            <li><a href="/plugin/users/delete/">Delete</a></li>
+            <li><a href="/plugin/users/search/">Search</a></li>
+        </ul>
+{% for obj in users %}
+<div>
+Name: {{obj.first_name}} {{obj.last_name}}
+Username: {{obj.last_name}}
+</div>
+{% endfor %}
+{% endblock %}
